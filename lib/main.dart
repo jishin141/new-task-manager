@@ -49,46 +49,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// GoRouter Configuration
-// final GoRouter _router = GoRouter(
-//   routes: [
-//     GoRoute(path: '/', builder: (context, state) => const LoginScreen()),
-//     GoRoute(path: '/signup', builder: (context, state) => const SignUpScreen()),
-//     GoRoute(
-//         path: '/tasks', builder: (context, state) => const TaskListScreen()),
-//     GoRoute(
-//       path: '/tasks/:id',
-//       builder: (context, state) =>
-//           TaskDetailsScreen(taskId: state.params['id']!),
-//     ),
-//   ],
-// );
-// final GoRouter _router = GoRouter(
-//   routes: [
-//     GoRoute(
-//       path: '/',
-//       builder: (context, state) =>
-//           const SplashScreen(), // Set SplashScreen as the initial route
-//     ),
-//     GoRoute(path: '/login', builder: (context, state) => const LoginScreen()),
-//     GoRoute(path: '/signup', builder: (context, state) => const SignUpScreen()),
-//     GoRoute(
-//         path: '/tasks', builder: (context, state) => const TaskListScreen()),
-//     GoRoute(
-//       path: '/tasks/:id',
-//       builder: (context, state) =>
-//           TaskDetailsScreen(taskId: state.pathParameters['id']!),
-//     ),
-//     GoRoute(
-//       path: '/add-task',
-//       builder: (context, state) {
-//         // Retrieve userId from the state (or a provider like AuthProvider)
-//         final userId = Provider.of<AuthProvider>(context, listen: false).userId;
-//         return AddTaskPage(userId: userId);
-//       },
-//     ),
-//   ],
-// );
+
 final GoRouter _router = GoRouter(
   routes: [
     GoRoute(
@@ -97,10 +58,7 @@ final GoRouter _router = GoRouter(
     ),
     GoRoute(path: '/login', builder: (context, state) => const LoginScreen()),
     GoRoute(path: '/signup', builder: (context, state) => const SignUpScreen()),
-    // GoRoute(
-    //   path: '/tasks',
-    //   builder: (context, state) => const TaskListScreen(),
-    // ),
+ 
     GoRoute(
       path: '/tasks',
       builder: (context, state) {
@@ -127,24 +85,3 @@ final GoRouter _router = GoRouter(
   ],
 );
 
-// final GoRouter _router = GoRouter(
-//   routes: [
-//     GoRoute(path: '/', builder: (context, state) => const LoginScreen()),
-//     GoRoute(path: '/signup', builder: (context, state) => const SignUpScreen()),
-//     GoRoute(
-//         path: '/tasks', builder: (context, state) => const TaskListScreen()),
-//     GoRoute(
-//       path: '/tasks/:id',
-//       builder: (context, state) =>
-//           TaskDetailsScreen(taskId: state.pathParameters['id']!),
-//     ),
-//     GoRoute(
-//       path: '/task-form',
-//       builder: (context, state) {
-//         final task = state.extra as Task?;
-//         return TaskFormScreen(
-//             task: task); // Pass task for editing or null for creating
-//       },
-//     ),
-//   ],
-// );
